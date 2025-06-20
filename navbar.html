@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Navbar</title>
+  <link rel="stylesheet" href="nav&footer.css" />
+</head>
+<body>
+
+  <nav class="navbar">
+    <div class="navbar-container">
+
+      <div class="hamburger" onclick="toggleMenu()">&#9776;</div>
+
+      <ul class="navbar-kiri" id="navbar-menu">
+        <li><a href="index.php">Home</a></li>
+        <li><a href="menu.php">Menu</a></li>
+        <li><a href="order.php">Order</a></li>
+        <li><a href="facilites.php">Facilities</a></li>
+        <li><a href="review.php">Review</a></li>
+      </ul>
+
+      <div class="navbar-kanan">
+        <a href="login.php" class="login-button">Login</a>
+      </div>
+
+    </div>
+  </nav>
+
+  <script>
+    function toggleMenu() {
+      const menu = document.getElementById('navbar-menu');
+      if (menu) menu.classList.toggle('show');
+    }
+
+    function handleResize() {
+      const hamburger = document.querySelector('.hamburger');
+      const menu = document.getElementById('navbar-menu');
+      if (!hamburger || !menu) return;
+
+      if (window.innerWidth <= 768) {
+        hamburger.style.display = 'block';
+      } else {
+        hamburger.style.display = 'none';
+        menu.classList.remove('show');
+      }
+    }
+
+    window.addEventListener('DOMContentLoaded', handleResize);
+    window.addEventListener('resize', handleResize);
+  </script>
+
+</body>
+</html>

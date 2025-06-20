@@ -1,0 +1,105 @@
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400..900;1,400..900&family=Sora:wght@100..800&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family:'Sora', sans-serif;
+}
+
+body {
+    background: url('../gambar/background.png') center/cover no-repeat;
+    margin: 0;
+    padding: 0;
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+    backdrop-filter: blur(8px);
+}
+
+.login-container {
+    width: 1000px;
+    height: 420px;
+    background-color: rgba(255, 255, 255, 0.9);
+    border-radius: 16px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+    display: flex;
+    overflow: hidden;
+}
+
+.login-left {
+    flex: 1;
+    background-color: #b7966b;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.login-left img {
+    width: 240px;
+}
+
+.login-right {
+    flex: 1;
+    padding: 40px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    background-color: #fefefe;
+}
+
+
+.login-right h2 {
+    margin-bottom: 30px;
+    font-size: 28px;
+    color: #4e342e;
+    text-align: center;
+}
+
+.login-right form p {
+    margin-bottom: 8px;
+    font-weight: 500;
+    color: #3e2723;
+    font-size: 14px;
+}
+
+.login-right input[type="text"],
+.login-right input[type="password"] {
+    width: 100%;
+    padding: 12px 14px;
+    margin-bottom: 20px;
+    border: none;
+    border-radius: 10px;
+    background-color: #f1e8df;
+    font-size: 14px;
+    color: #3e2723;
+}
+
+.login-right input::placeholder {
+    color: #a7927d;
+}
+
+.tombol {
+    margin-top: 20px;
+    display: flex;
+    justify-content: center;
+    width: 500px;
+}
+
+.tombol {
+    background-color: #6b4f3b;
+    color: white;
+    border: none;
+    padding: 12px 30px;
+    border-radius: 10px;
+    font-size: 14px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.tombol:hover {
+    background-color: #4e342e;
+}
+

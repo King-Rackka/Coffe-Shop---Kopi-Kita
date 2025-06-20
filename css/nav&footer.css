@@ -1,0 +1,269 @@
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400..900;1,400..900&family=Sora:wght@100..800&display=swap');
+
+*{
+  box-sizing: border-box;
+}
+
+body{
+    font-family:'Sora', sans-serif;
+}
+
+.navbar{
+      background-color: white;
+      padding: 0 13px;
+      position: fixed;
+      top: 0;
+      width: 100%;
+      height: 70px;
+      z-index: 999;
+      border-bottom: 2px solid #4C3F38;
+  }
+
+  .navbar-container{
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      height: 100%;
+  }
+
+  .navbar-kiri{
+      list-style: none;
+      display: flex;
+      gap: 25px;
+  }
+
+  .navbar-kiri li a{
+      text-decoration: none;
+      color: #4C3F38;
+      font-size: 1rem;
+      font-weight: 500;
+      letter-spacing: 1px;
+      transition: color 0.3s;
+  }
+
+  .navbar-kiri li a:hover{
+      color: #d2b8a3;
+  }
+
+  .login-button{
+      background-color: #4C3F38;
+      padding: 10px 15px;
+      border-radius: 15px;
+      color: white;
+      text-decoration: none;
+      font-size: 1rem;
+      font-weight: 550;
+      transition: background-color 0.3s;
+  }
+
+  .login-button:hover{
+      background-color: #c4a990;
+  }
+
+  .footer {
+      background-color: #3e2723;
+      color: #fff;
+      padding: 50px 0;
+  }
+
+  .footer-container {
+      display: flex;
+      justify-content: space-between;
+      flex-wrap: wrap;
+      max-width: auto;
+      margin: auto;
+      height: auto;
+      gap: 40px;
+      padding: 0 20px;
+  }
+
+  .footer-section {
+      flex: 1 1 220px;
+  }
+
+  .footer-logo {
+      width: 200px;
+  }
+
+  .footer-social {
+      display: flex;
+      gap: 15px;
+  }
+
+  .footer-social img {
+      transition: transform 0.3s;
+      color: white;
+  }
+
+  .footer-social img:hover {
+      transform: scale(1.1);
+  }
+
+  .footer-section h4 {
+      font-size: 1.2rem;
+      margin-bottom: 15px;
+      text-transform: uppercase;
+      letter-spacing: 1px;
+  }
+
+  .footer-section p,
+  .footer-section ul li {
+      font-size: 0.95rem;
+      line-height: 1.6;
+      color: #bbb;
+  }
+
+  .footer-section ul {
+      list-style: none;
+      padding-left: 0;
+  }
+
+  .footer-section ul li {
+      margin-bottom: 10px;
+  }
+
+  .footer-section a {
+      color: #fff;
+      text-decoration: none;
+      transition: color 0.3s;
+  }
+
+  .footer-section a:hover {
+      color: #d2b8a3;
+  }
+
+  .footer-social {
+    display: flex;
+    gap: 15px;
+    margin-top: 10px;
+  }
+
+  .footer-social img {
+    width: 36px;
+    height: 36px;
+    transition: transform 0.3s ease;
+  }
+
+  .footer-social img:hover {
+    transform: scale(1.1);
+  }
+
+  .navbar-kiri-kanan {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+  }
+
+.sidebar {
+  position: fixed;
+  top: 70px; /* Sejajar sama navbar */
+  right: -250px;
+  width: 250px;
+  height: 100vh;
+  background-color: #4C3F38;
+  padding: 20px;
+  box-shadow: -2px 0 5px rgba(0,0,0,0.1);
+  transition: right 0.3s ease-in-out;
+  z-index: 998;
+}
+
+.sidebar.active {
+  right: 0;
+}
+
+.sidebar ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.sidebar ul li {
+  margin-bottom: 20px;
+}
+
+.sidebar ul li a {
+  color: white;
+  text-decoration: none;
+  font-size: 1.1rem;
+  font-weight: 500;
+  display: block;
+  transition: color 0.3s;
+}
+
+.sidebar ul li a:hover {
+  color: #d2b8a3;
+}
+
+.menu-toggle {
+  display: none;
+  font-size: 2rem;
+  cursor: pointer;
+  color: #4C3F38;
+  z-index: 9999;
+}
+
+.hamburger {
+  font-size: 28px;
+  color: #4C3F38;
+  cursor: pointer;
+  display: none;
+}
+
+  .hamburger {
+  font-size: 28px;
+  color: #4C3F38;
+  cursor: pointer;
+  display: none;
+}
+
+@media (max-width: 768px) {
+    .hamburger {
+      display: block;
+      position: absolute;
+      top: 20px;
+      right: 20px;
+      z-index: 1001;
+    }
+
+    .navbar-kiri {
+      display: none;
+      flex-direction: column;
+      position: absolute;
+      top: 70px;
+      left: 0;
+      width: 100%;
+      background-color: white;
+      padding: 10px 0;
+      z-index: 1000;
+    }
+
+    .navbar-kiri.show {
+      display: flex;
+    }
+
+    .navbar-kiri li {
+      text-align: center;
+      margin: 10px 0;
+    }
+
+    .navbar-kanan {
+      display: none;
+    }
+
+    .footer-container {
+      flex-direction: column;
+      align-items: center;
+      text-align: center;
+      padding: 0 20px;
+    }
+
+    .footer-section {
+      margin-bottom: 40px;
+    }
+
+    .footer-social {
+      justify-content: center;
+    }
+
+  }
